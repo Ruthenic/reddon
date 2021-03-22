@@ -29,10 +29,10 @@ sub = 'all'
 oldsub = []
 subm = ''
 def clearscreen(): 
-    if os.name == 'nt': 
-        os.system('cls') 
-    else: 
-        os.system('clear') 
+    if os.name == 'nt':
+        os.system('cls')
+    else:
+        os.system('clear')
 def parseinput(imp):
     imp = imp.replace('r/', '')
     return imp.split(' ')
@@ -104,7 +104,7 @@ def commandrun(inp,sub,oldsub,subm,subbedsubs):
                 img = requests.get(submission.url).content
                 f.write(img)
             os.system('xdg-open tmp')
-            os.remove('tmp')
+            #os.remove('tmp')
         else:
             print('Command only works on Linux!')
     elif inp[0].startswith('#'):
